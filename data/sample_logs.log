@@ -1,0 +1,38 @@
+2026-06-17T10:15:00.000Z [api-gateway] INFO GET /orders/1000 200 OK 23ms
+2026-06-17T10:15:00.100Z [order-service] INFO Order 1000 fetched successfully
+2026-06-17T10:15:00.400Z [api-gateway] INFO GET /orders/1001 200 OK 23ms
+2026-06-17T10:15:00.500Z [order-service] INFO Order 1001 fetched successfully
+2026-06-17T10:15:00.800Z [api-gateway] INFO GET /orders/1002 200 OK 23ms
+2026-06-17T10:15:00.900Z [order-service] INFO Order 1002 fetched successfully
+2026-06-17T10:15:01.200Z [api-gateway] INFO GET /orders/1003 200 OK 23ms
+2026-06-17T10:15:01.300Z [order-service] INFO Order 1003 fetched successfully
+2026-06-17T10:15:01.600Z [api-gateway] INFO GET /orders/1004 200 OK 23ms
+2026-06-17T10:15:01.700Z [order-service] INFO Order 1004 fetched successfully
+2026-06-17T10:15:02.000Z [api-gateway] INFO GET /orders/1005 200 OK 23ms
+2026-06-17T10:15:02.000Z [auth-service] ERROR Invalid JWT token for request from 203.0.113.55
+2026-06-17T10:15:02.100Z [order-service] INFO Order 1005 fetched successfully
+2026-06-17T10:15:02.400Z [api-gateway] INFO GET /orders/1006 200 OK 23ms
+2026-06-17T10:15:02.500Z [order-service] INFO Order 1006 fetched successfully
+2026-06-17T10:15:02.800Z [api-gateway] INFO GET /orders/1007 200 OK 23ms
+2026-06-17T10:15:02.900Z [order-service] INFO Order 1007 fetched successfully
+2026-06-17T10:15:03.200Z [mongodb] WARN Connection pool utilization at 92% (184/200 connections in use)
+2026-06-17T10:15:04.800Z [mongodb] WARN Connection pool utilization at 97% (194/200 connections in use)
+2026-06-17T10:15:06.100Z [mongodb] ERROR Connection pool exhausted: rejecting new connection requests
+2026-06-17T10:15:06.600Z [order-service] ERROR DB connection timeout after 5000ms while processing order ORD-2200
+2026-06-17T10:15:07.000Z [order-service] ERROR DB connection timeout after 5000ms while processing order ORD-2201
+2026-06-17T10:15:07.500Z [order-service] ERROR DB connection timeout after 5000ms while processing order ORD-2202
+2026-06-17T10:15:08.100Z [order-service] ERROR DB connection timeout after 5000ms while processing order ORD-2203
+2026-06-17T10:15:08.400Z [order-service] ERROR Failed to process order ORD-2204: DBConnectionError: pool exhausted
+2026-06-17T10:15:08.900Z [inventory-service] ERROR DB connection timeout after 5000ms while checking stock for SKU-9182
+2026-06-17T10:15:09.300Z [inventory-service] ERROR StockCheckFailed: DBConnectionError: pool exhausted
+2026-06-17T10:15:09.600Z [api-gateway] ERROR 503 Service Unavailable from order-service (POST /orders)
+2026-06-17T10:15:09.900Z [api-gateway] ERROR 503 Service Unavailable from inventory-service (GET /stock)
+2026-06-17T10:15:10.400Z [payment-service] WARN Circuit breaker OPEN for order-service after 5 consecutive failures
+2026-06-17T10:15:10.600Z [payment-service] ERROR Payment ORD-2204 aborted: dependent service order-service unavailable
+2026-06-17T10:15:12.000Z [auth-service] WARN Rate limit exceeded for client 198.51.100.23
+2026-06-17T10:15:14.000Z [mongodb] INFO Connection pool recovered: 41/200 connections in use
+2026-06-17T10:15:14.500Z [order-service] INFO DB connectivity restored, resuming normal processing
+2026-06-17T10:15:15.000Z [api-gateway] INFO GET /orders/3000 200 OK 19ms
+2026-06-17T10:15:15.500Z [api-gateway] INFO GET /orders/3001 200 OK 19ms
+2026-06-17T10:15:16.000Z [api-gateway] INFO GET /orders/3002 200 OK 19ms
+2026-06-17T10:15:16.500Z [api-gateway] INFO GET /orders/3003 200 OK 19ms
