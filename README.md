@@ -424,9 +424,6 @@ To add a new error pattern:
 3. Add a test in `tests/test_classifier.py`
 4. Update the `SERVICE_DEPENDENCIES` in `app/rca_engine.py` if introducing a new service
 
-## License
-
-MIT
 
 ## References
 
